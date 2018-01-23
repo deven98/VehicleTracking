@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VehicleTracking</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="enter_barcode">Enter Barcode</string>
+    <string name="check">Check</string>
+    <string name="last_location">Last Location</string>
+    <string name="change">Change</string>
+    <string name="rollout">Rollout</string>
+</resources>
