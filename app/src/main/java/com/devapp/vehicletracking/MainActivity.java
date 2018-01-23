@@ -16,5 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        StationTrackDialogFragment stationTrackDialogFragment = new StationTrackDialogFragment();
+
+        stationTrackDialogFragment.show(getSupportFragmentManager(),"dialog");
+
     }
 }

@@ -6,4 +6,9 @@
     <string name="last_location">Last Location</string>
     <string name="change">Change</string>
     <string name="rollout">Rollout</string>
+    <string name="change_station">Change Station</string>
+    <string name="station_track">Station Track</string>
+    <string name="password">Password</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>
