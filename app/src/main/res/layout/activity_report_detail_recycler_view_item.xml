@@ -21,7 +21,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
-            android:text="Wheel Alignment"
+            android:text="25T- Std. Tipper or Boggie"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/activity_report_detail_recycler_view_item_count_text_view"

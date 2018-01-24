@@ -4,14 +4,18 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.devapp.vehicletracking.R;
+import com.devapp.vehicletracking.activities.MainActivity;
+import com.devapp.vehicletracking.utils.StationUtils;
 
 public class StationTrackDialogFragment extends DialogFragment {
 
@@ -52,7 +56,29 @@ public class StationTrackDialogFragment extends DialogFragment {
             @Override
             public void onClick(View view) {
 
-                getDialog().dismiss();
+                if(!stationSpinner.getSelectedItem().toString().matches(StationUtils.CHANGE_STATION)) {
+
+                    try {
+
+                        MainActivity.CURRENT_STATION = stationSpinner.getSelectedItem().toString();
+
+                        MainActivity mainActivity = (MainActivity) context;
+
+                        mainActivity.refreshStation();
+
+                    } catch (Exception e) {
+
+                        e.printStackTrace();
+
+                    }
+
+                    getDialog().dismiss();
+
+                }else{
+
+                    Toast.makeText(context, "Please select a station!", Toast.LENGTH_SHORT).show();
+
+                }
 
             }
         });

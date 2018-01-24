@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.devapp.vehicletracking.R;
 import com.devapp.vehicletracking.fragments.StationTrackDialogFragment;
+import com.devapp.vehicletracking.utils.StationUtils;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     Button scanBarcode;
     EditText barcodeEditText;
     TextView changeStation;
+
+    public static String CURRENT_STATION = StationUtils.ROLL_OUT;
 
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
 
@@ -114,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(getSupportActionBar() != null){
 
-            getSupportActionBar().setTitle("Roll Out");
+            getSupportActionBar().setTitle(CURRENT_STATION);
 
         }
 
@@ -134,4 +137,15 @@ public class MainActivity extends AppCompatActivity {
         stationTrackDialogFragment.show(getSupportFragmentManager(),"dialog");
 
     }
+
+    public void refreshStation(){
+
+        if(getSupportActionBar() != null){
+
+            getSupportActionBar().setTitle(CURRENT_STATION);
+
+        }
+
+    }
+
 }
