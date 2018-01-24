@@ -1,9 +1,12 @@
-package com.devapp.vehicletracking;
+package com.devapp.vehicletracking.activities;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.devapp.vehicletracking.R;
+import com.devapp.vehicletracking.activities.MainActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

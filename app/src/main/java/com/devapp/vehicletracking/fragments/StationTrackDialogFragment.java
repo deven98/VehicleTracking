@@ -1,4 +1,4 @@
-package com.devapp.vehicletracking;
+package com.devapp.vehicletracking.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+
+import com.devapp.vehicletracking.R;
 
 public class StationTrackDialogFragment extends DialogFragment {
 
@@ -47,6 +49,17 @@ public class StationTrackDialogFragment extends DialogFragment {
         okButton = v.findViewById(R.id.station_track_alert_dialog_ok_button);
 
         okButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getDialog().dismiss();
+
+            }
+        });
+
+        cancelButton = v.findViewById(R.id.station_track_alert_dialog_cancel_button);
+
+        cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

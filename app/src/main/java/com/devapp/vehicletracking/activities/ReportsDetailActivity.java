@@ -1,7 +1,9 @@
-package com.devapp.vehicletracking;
+package com.devapp.vehicletracking.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.devapp.vehicletracking.R;
 
 public class ReportsDetailActivity extends AppCompatActivity {
 
