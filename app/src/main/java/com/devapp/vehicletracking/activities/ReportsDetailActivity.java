@@ -22,8 +22,10 @@ public class ReportsDetailActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        reportsDetailRecyclerView = findViewById(R.id.activity_report_detail_recycler_view);
-        reportsDetailRecyclerViewAdapter = new ReportsDetailRecyclerViewAdapter(this);
+        String stationName = getIntent().getStringExtra("station");
+
+        reportsDetailRecyclerView = findViewById(R.id.activity_reports_detail_recycler_view);
+        reportsDetailRecyclerViewAdapter = new ReportsDetailRecyclerViewAdapter(this,stationName);
 
         reportsDetailRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         reportsDetailRecyclerView.setAdapter(reportsDetailRecyclerViewAdapter);
