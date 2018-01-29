@@ -2,9 +2,11 @@ package com.devapp.vehicletracking.utils;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.devapp.vehicletracking.R;
 import com.devapp.vehicletracking.activities.MainActivity;
 import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 
@@ -135,11 +137,17 @@ public class NetworkUtils {
             @Override
             protected void onPostExecute(Void aVoid) {
                 super.onPostExecute(aVoid);
-                Toast.makeText(context, "Added", Toast.LENGTH_SHORT).show();
+
+                new AlertDialog.Builder(context)
+                        .setIcon(R.mipmap.ic_launcher)
+                        .setTitle("Barcode scanned and updated")
+                        .setMessage("Vehicle ID scanned: " + carModelNumber)
+                        .setPositiveButton("OK",null)
+                        .show();
+
             }
+
         }.execute();
-
-
 
     }
 

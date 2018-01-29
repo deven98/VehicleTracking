@@ -55,19 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
                 try {
                     NetworkUtils.changeCarStationNumber(this, scanResult.getContents(), StationUtils.stationMatcher(CURRENT_STATION));
-
-                    new AlertDialog.Builder(this)
-                            .setIcon(R.mipmap.ic_launcher)
-                            .setTitle("Barcode scanned and updated")
-                            .setMessage("Vehicle ID scanned: " + scanResult.getContents())
-                            .setPositiveButton("OK",null)
-                            .show();
-
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
 
             }
+
         }
 
     }
